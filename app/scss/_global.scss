@@ -185,16 +185,9 @@ body,html{
       
 }
 .footer-top__form-button {
-    width: 140px;
-    height: 53px;
-    background-color: #fe3e57;
-    color: white;
-    text-align: center;
-    border: none;
-    line-height: 36px;
-    text-transform:uppercase;
-    margin-left: 10px;
-    box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
+
+    @extend %btn;
+
 
     
 
@@ -286,5 +279,89 @@ body,html{
 
 .slider-2__block-4 {
     background-color: rgb(192, 192, 192);
+
+}
+
+
+.top-slider{
+    background-color: #f6f6f6;
+    background-image: url('../images/top-slider__bi.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    padding-top: 65px;
+    &__container{
+        max-width: 1560px;
+    }
+    &__item{
+        display: flex !important ; 
+        justify-content: space-between;
+    }
+    &__content{
+        padding-left: 175px;
+        padding-top: 125px;
+    }
+    &__title {
+        max-width:670px;
+        font-size: 58px;
+        line-height: 68px;
+        color: $title;
+        @extend %roboto-700;
+    }
+    &__text{
+        max-width: 470px;
+        margin-bottom: 55px;
+    }
+    &__link{
+        @extend %btn
+    }
+    .slick-dots{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 40px;
+        padding-right: 85px;
+        margin-top: -70px;
+        li{
+            padding: 0 5px;
+            line-height: 0;
+            button{
+                padding: 0px;
+                font-size:0px;
+                background-color: transparent;
+                width: 26px;
+                height: 26px;
+                border: 1px solid transparent;
+                border-radius: 50%;
+                position: relative;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 50%;  
+                    background-color: $default;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);   
+                }                
+
+            }
+            &.slick-active{
+                button{  
+                    border-color: $accent;
+                    &::before{
+                    
+                        background-color: $accent;
+                    }
+    }
+              
+
+            }
+        }
+
+    
+
+       
+    }
 
 }
