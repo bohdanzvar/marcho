@@ -543,3 +543,67 @@ body,html{
     }
 
 }
+
+.video-fashion{
+    background-color: #f6f6f6;
+    background-image: url('../images/video-bg.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding: 125px 0px;
+    &__inner{
+        display: flex;
+    }
+    &__popup{
+        margin-right: 65px;
+        max-width:530px;
+        width: 100%;
+        height: 480px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+    &__content{
+        max-width: 570px;
+        padding-top: 79px;
+
+    }
+
+    
+}
+
+ 
+
+.video-fashion__popup {
+
+}
+
+.video-fashion__link {
+    @extend %btn;
+
+}
+
+.video-fashion__content {
+}
+
+.video-fashion__subtitle {
+    color: $accent;
+    font-size: 22px;
+    @extend %quicksand-500;
+    text-transform: uppercase;
+
+
+}
+
+.video-fashion__title {
+    text-align:left;
+
+}
+
+.video-fashion__text {
+    
+    margin-bottom: 60px;
+}
+

@@ -27,5 +27,9 @@ $title:#28292d;
     @extend %roboto-400;
     padding: 14px 35px;
     border: none;
+    &:hover{
+        background-color: #fd1a3c;
+    }
 
 }
+
